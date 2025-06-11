@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoadConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                <img src="final logo Loadconnct.png" alt="Loadconncet Logo" class="square-logo " />
+                <span class="logo-txt"></span>
+            </div>
+            <div class="left">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="Blog.html">Blogs</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="right">
+                    <ul>
+                        <li><a href="Login.html"> <img src="sign-in-alt (1).png" alt="Login-Icon"
+                                    class="Login-Icon">Login</a>
+                        </li>
+                        <li><a href="register.html"> <img src="user (1).png" alt="Register Icon"
+                                    class="icon-register">Free
+                                Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- this is the main section  -->
+    <main>
+        <div class="operator-container">
+            <div class="header">
+                Customer Registration
+            </div>
+
+            <div class="form-content">
+                <div class="description">
+                    Please fill the following form to register as a Customer with TruckSuvidha. After successfully
+                    submission of this form you will receive a confirmation mail having login credentials.
+                </div>
+
+                <form id="registrationForm">
+                    <!-- Basic Details -->
+                    <div class="section">
+                        <div class="section-title">Basic Details</div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Your Name <span class="required">*</span></label>
+                                <input type="text" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name</label>
+                                <input type="text" name="lastName">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Email <span class="required">*</span></label>
+                                <input type="email" name="email" required>
+                            </div>
+                            <!-- <div class="form-group">
+                                <label>No. Of Trucks</label>
+                                <input type="text" name="truckCount">
+                            </div> -->
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Phone No. For SMS? <span class="required">*</span></label>
+                                <input type="tel" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Date of Birth</label>
+                                <input type="date" name="dob">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Details -->
+                    <div class="section">
+                        <div class="section-title">Contact Details</div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Address</label>
+                                <textarea name="address" placeholder="Enter your full address"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Country</label>
+                                <select name="country">
+                                    <option value="">Select Country</option>
+                                    <option value="india">India</option>
+                                    <option value="usa">United States</option>
+                                    <option value="uk">United Kingdom</option>
+                                    <option value="canada">Canada</option>
+                                    <option value="australia">Australia</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Pin Code <span class="required">*</span></label>
+                                <input type="text" name="pincode" required>
+                            </div>
+                            <div class="form-group">
+                                <label>District</label>
+                                <select name="district">
+                                    <option>Select</option>
+                                    <option>Araria</option>
+                                    <option>Aurangabad</option>
+                                    <option>Banka</option>
+                                    <option>Begusarai</option>
+                                    <option>Bhagalpur</option>
+                                    <option>Bihar Sharif</option>
+                                    <option>Bodh Gaya</option>
+                                    <option>Buxar</option>
+                                    <option>Chapra</option>
+                                    <option>Darbhanga</option>
+                                    <option>Dehri</option>
+                                    <option>Dinapur Nizamat</option>
+                                    <option>East Champaran</option>
+                                    <option>Gaya</option>
+                                    <option>Gopalganj</option>
+                                    <option>Hajipur</option>
+                                    <option>Jamalpur</option>
+                                    <option>Jamui</option>
+                                    <option>Jehanabad</option>
+                                    <option>Kaimur (Bhabua)</option>
+                                    <option>Katihar</option>
+                                    <option>Khagaria</option>
+                                    <option>Lakhisarai</option>
+                                    <option>Madhepura</option>
+                                    <option>Madhubani</option>
+                                    <option>Motihari</option>
+                                    <option>Munger</option>
+                                    <option>Muzaffarpur</option>
+                                    <option>Nalanda</option>
+                                    <option>Nawada</option>
+                                    <option>Patna</option>
+                                    <option>Purnia</option>
+                                    <option>Pusa</option>
+                                    <option>Rohtas</option>
+                                    <option>Saharsa</option>
+                                    <option>Samastipur</option>
+                                    <option>Saran</option>
+                                    <option>Sasaram</option>
+                                    <option>Sheikhpura</option>
+                                    <option>Siwan</option>
+                                    <option>Sitamarhi</option>
+                                    <option>Supoul</option>
+                                    <option>Vaishali</option>
+                                    <option>West Champaran</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>State</label>
+                                <select name="state">
+                                    <option>Select State</option>
+                                    <option>Andhra Pradesh</option>
+                                    <option>Arunachal Pradesh</option>
+                                    <option>Assam</option>
+                                    <option>Bihar</option>
+                                    <option>Chhattisgarh</option>
+                                    <option>Goa</option>
+                                    <option>Gujarat</option>
+                                    <option>Haryana</option>
+                                    <option>Himachal Pradesh</option>
+                                    <option>Jharkhand</option>
+                                    <option>Karnataka</option>
+                                    <option>Kerala</option>
+                                    <option>Madhya Pradesh</option>
+                                    <option>Maharashtra</option>
+                                    <option>Manipur</option>
+                                    <option>Meghalaya</option>
+                                    <option>Mizoram</option>
+                                    <option>Nagaland</option>
+                                    <option>Odisha</option>
+                                    <option>Punjab</option>
+                                    <option>Rajasthan</option>
+                                    <option>Sikkim</option>
+                                    <option>Tamil Nadu</option>
+                                    <option>Telangana</option>
+                                    <option>Tripura</option>
+                                    <option>Uttar Pradesh</option>
+                                    <option>Uttarakhand</option>
+                                    <option>West Bengal</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>City</label>
+                                <select name="city">
+                                    <option value="">Select City</option>
+                                    <option>Banka</option>
+                                    <option>East Champaran</option>
+                                    <option>Gaya</option>
+                                    <option>Jamui</option>
+                                    <option>Jehanabad</option>
+                                    <option>Kaimur (Bhabua)</option>
+                                    <option>Lakhisarai</option>
+                                    <option>Madhepura</option>
+                                    <option>Nalanda</option>
+                                    <option>Patna</option>
+                                    <option>Purnia</option>
+                                    <option>Rohtas</option>
+                                    <option>Saharsa</option>
+                                    <option>Sheikhpura</option>
+                                    <option>Saran</option>
+                                    <option>Sitamarhi</option>
+                                    <option>Vaishali</option>
+                                    <option>West Champaran</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Managing Document -->
+                    <div class="section">
+                        <h3 class="section-title">Manage Document</h3>
+                        <h4>Addhaar card</h4>
+                        <div class="file-upload" onclick="document.getElementById('fileUpload').click()">
+                            <input type="file" id="fileUpload" name="documents" multiple
+                                accept=".pdf,.doc,.docx,.jpg,.png">
+                            <p>Click here to upload documents</p>
+                            <small>Supported formats: PDF, DOC, DOCX, JPG, PNG</small>
+                        </div>
+                    </div>
+
+                    <!-- Other Details -->
+                    <div class="section">
+                        <div class="section-title">Other Details</div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Pan No.</label>
+                                <input type="text" name="panNo" placeholder="Enter PAN number">
+                            </div>
+                            <div class="form-group">
+                                <label>GST No.</label>
+                                <input type="text" name="gstNo" placeholder="Enter GST number">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Aadhar No.</label>
+                                <input type="text" name="aadharNo" placeholder="Enter Aadhar number">
+                            </div>
+                            <!-- <div class="form-group">
+                                <label>Driving License</label>
+                                <input type="text" name="drivingLicense" placeholder="Enter license number">
+                            </div> -->
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label>Detail Collection</label>
+                            <textarea name="detailCollection" placeholder="Enter additional details"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Captcha -->
+                    <div class="captcha-section">
+                        <div class="captcha-box" id="captchaText">AB7K9</div>
+                        <div class="form-group" style="flex: 1;">
+                            <label>Enter Captcha <span class="required">*</span></label>
+                            <input type="text" name="captcha" required placeholder="Enter the captcha">
+                        </div>
+                        <button type="button" onclick="generateCaptcha()"
+                            style="background: none; border: none; color: #2c5aa0; cursor: pointer;">🔄</button>
+                    </div>
+
+                    <!-- Agreement -->
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="agreement" name="agreement" required>
+                        <label for="agreement">I have read and I Agree to the <a href="#" style="color: #2c5aa0;">Terms
+                                & Conditions</a></label>
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="submit-section">
+                        <button type="submit" class="submit-button">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="operator.js"></script>
+    <!-- and this is the footer section -->
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h2>Load<span class="highlight-red">Connect</span></h2>
+                <img src="final logo Loadconnct.png" alt="LoadConnect">
+            </div>
+            <!-- coloumn -----1 -->
+            <div class="footer-column">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li><a href="Login.html">Log-in</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h3>contact-info</h3>
+                <p><a href="info@loadconnectgmail.com">🔗info@loadconnectgmail.com</a></p>
+                <p> <a href="tel:+91 9153692861">📞9153692861</a>
+                    /
+                    <a href="tel:+91 8210973690">8210973690</a>
+                    <a href="tel:+91 9114552303">9114552303</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright &#169; loadconnectiitcapston.netlify.app | All rights reserved ||2025
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

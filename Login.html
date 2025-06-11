@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoadConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                <img src="final logo Loadconnct.png" alt="Loadconncet Logo" class="square-logo " />
+                <span class="logo-txt"></span>
+            </div>
+            <div class="left">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="Blog.html">Blogs</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="right">
+                    <ul>
+                        <li><a href="Login.html"> <img src="sign-in-alt (1).png" alt="Login-Icon"
+                                    class="Login-Icon">Login</a>
+                        </li>
+                        <li><a href="register.html"> <img src="user (1).png" alt="Register Icon" class="icon-register">Free
+                                Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- this is the main section  -->
+    <main>
+        <div class="login-container">
+            <div class="login-right">
+                <img src="Login-loadconnect img.png" alt="Truck">
+            </div>
+            <div class="login-left">
+                <h2 class="login-title">Log In With Your LoadConnect Account Details</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label class="form-label">Mobile No<span class="required">*</span></label>
+                        <div class="mobile-input-container">
+                            <div class="country-code">
+                                <div class="flag"></div>
+                                <span>+91</span>
+                            </div>
+                            <input type="tel" class="mobile-input" placeholder="Enter Registered Mobile Number"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Password<span class="required">*</span></label>
+                        <div class="password-container">
+                            <input type="password" class="password-input" placeholder="Enter Password" required>
+                            <button type="button" class="password-toggle" onclick="togglePassword()">👁</button>
+                        </div>
+                    </div>
+
+                    <div class="forgot-password">
+                        <a href="#" onclick="forgotPassword()">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="sign-in-btn">Sign In</button>
+                </form>
+
+                <div class="signup-link">
+                    Don't have an account with <strong>LoadConnect</strong>? <a href="#" onclick="signUp()">Sign up
+                        here</a>
+                </div>
+
+    </main>
+    <!-- and this is the footer section -->
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h2>Load<span class="highlight-red">Connect</span></h2>
+                <img src="final logo Loadconnct.png" alt="LoadConnect">
+            </div>
+            <!-- coloumn -----1 -->
+            <div class="footer-column">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li><a href="Login.html">Log-in</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h3>contact-info</h3>
+                <p><a href="info@loadconnectgmail.com">🔗info@loadconnectgmail.com</a></p>
+                <p> <a href="tel:+91 9153692861">📞9153692861</a>
+                    /
+                    <a href="tel:+91 8210973690">8210973690</a>
+                    <a href="tel:+91 9114552303">9114552303</a>
+                </p>
+
+
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright &#169; loadconnectiitcapston.netlify.app | All rights reserved ||2025
+        </div>
+    </footer>
+
+    <script src="login.js"></script>
+</body>
+
+</html>

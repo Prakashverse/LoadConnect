@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoadConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+        background-image: url(background\ of\ loadconnect.jpg);
+        margin-bottom: 20%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                <img src="modern Logistic logo pro.PNG" alt="Loadconncet Logo" class="square-logo " />
+                <span class="logo-txt"></span>
+            </div>
+            <div class="left">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="Blog.html">Blogs</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="right">
+                    <ul>
+                        <li><a href="Login.html"> <img src="sign-in-alt (1).png" alt="Login-Icon"
+                                    class="Login-Icon">Login</a>
+                        </li>
+                        <li><a href="register.html"> <img src="user (1).png" alt="Register Icon"
+                                    class="icon-register">Free
+                                Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- this is the main section  -->
+    <main>
+        <div class="form-container">
+            <div class="form-header">
+                POST YOUR LOAD DETAIL
+            </div>
+
+            <form id="loadForm">
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="fullLoad" name="loadType" value="full" checked>
+                        <label for="fullLoad">Full Load<br><small>(Above 3MT)</small></label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="partLoad" name="loadType" value="part">
+                        <label for="partLoad">Part Load<br><small>(Below 3MT)</small></label>
+                    </div>
+                </div>
+
+                <!-- Full Load Fields -->
+                <div class="form-grid" id="fullLoadFields">
+                    <div class="form-group">
+                        <label for="sourceCity">From <span class="required">*</span></label>
+                        <input type="text" id="sourceCity" name="sourceCity" placeholder="Source City" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="destinationCity">To <span class="required">*</span></label>
+                        <input type="text" id="destinationCity" name="destinationCity" placeholder="Destination City"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="material">Material <span class="required">*</span></label>
+                        <select id="material" name="material" required>
+                            <option value="">Select</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="furniture">Furniture</option>
+                            <option value="machinery">Machinery</option>
+                            <option value="textiles">Textiles</option>
+                            <option value="food">Food Items</option>
+                            <option value="chemicals">Chemicals</option>
+                            <option value="construction">Construction Materials</option>
+                            <option value="automotive">Automotive Parts</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="weight">Weight (MT) <span class="required">*</span></label>
+                        <select id="weight" name="weight" required>
+                            <option value="">Select</option>
+                            <option value="3-5">3-5 MT</option>
+                            <option value="5-10">5-10 MT</option>
+                            <option value="10-20">10-20 MT</option>
+                            <option value="20-30">20-30 MT</option>
+                            <option value="30+">30+ MT</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="truckType">Truck Type <span class="required">*</span></label>
+                        <select id="truckType" name="truckType" required>
+                            <option value="">Select</option>
+                            <option value="open">Open Truck</option>
+                            <option value="closed">Closed Truck</option>
+                            <option value="container">Container</option>
+                            <option value="trailer">Trailer</option>
+                            <option value="tanker">Tanker</option>
+                            <option value="refrigerated">Refrigerated</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="numTrucks">No. of Trucks <span class="required">*</span></label>
+                        <select id="numTrucks" name="numTrucks" required>
+                            <option value="">Select</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="5+">5+</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="scheduledDate">Scheduled Date <span class="required">*</span></label>
+                        <div class="date-wrapper">
+                            <input type="date" id="scheduledDate" name="scheduledDate" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Part Load Fields -->
+                <div class="form-grid" id="partLoadFields" style="display: none;">
+                    <div class="form-group">
+                        <label for="sourceCity2">From <span class="required">*</span></label>
+                        <input type="text" id="sourceCity2" name="sourceCity2" placeholder="Source City">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="destinationCity2">To <span class="required">*</span></label>
+                        <input type="text" id="destinationCity2" name="destinationCity2" placeholder="Destination City">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sourcePinCode">Source Pin Code</label>
+                        <input type="text" id="sourcePinCode" name="sourcePinCode" placeholder="From Pin Code"
+                            maxlength="6">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="destinationPinCode">Destination Pin Code</label>
+                        <input type="text" id="destinationPinCode" name="destinationPinCode"
+                            placeholder="Destination Pin Code" maxlength="6">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pickupType">Pick up Type <span class="required">*</span></label>
+                        <select id="pickupType" name="pickupType">
+                            <option value="">Select</option>
+                            <option value="door-pickup">Door Pickup</option>
+                            <option value="godown-pickup">Godown Pickup</option>
+                            <option value="warehouse-pickup">Warehouse Pickup</option>
+                            <option value="factory-pickup">Factory Pickup</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="material2">Material <span class="required">*</span></label>
+                        <select id="material2" name="material2">
+                            <option value="">Select</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="furniture">Furniture</option>
+                            <option value="machinery">Machinery</option>
+                            <option value="textiles">Textiles</option>
+                            <option value="food">Food Items</option>
+                            <option value="chemicals">Chemicals</option>
+                            <option value="construction">Construction Materials</option>
+                            <option value="automotive">Automotive Parts</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="weight2">Weight (MT) <span class="required">*</span></label>
+                        <select id="weight2" name="weight2">
+                            <option value="">Select</option>
+                            <option value="0.5-1">0.5-1 MT</option>
+                            <option value="1-1.5">1-1.5 MT</option>
+                            <option value="1.5-2">1.5-2 MT</option>
+                            <option value="2-2.5">2-2.5 MT</option>
+                            <option value="2.5-3">2.5-3 MT</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pickupDate">Pick up Date <span class="required">*</span></label>
+                        <div class="date-wrapper">
+                            <input type="date" id="pickupDate" name="pickupDate">
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="submit-load">Submit</button>
+            </form>
+        </div>
+         <div class="home-right">
+            <video autoplay loop muted playsinline width="100%">
+                <source src="loadconnect video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="home-left">
+            <h1>Welcome to Load<span class="highlight-red">Connect</span></h1>
+            <p>Your Smart Logistics Companion</p>
+            <p>LoadConnect is a digital logistics platform designed to revolutionize transportation across rural and
+                urban India. We connect vehicle owners, rural producers, and urban buyers to eliminate empty return
+                trips, reduce fuel waste, and boost earnings. With real-time tracking, easy load booking, and digital
+                payments, LoadConnect makes logistics smarter, greener, and more efficient for everyone.</p>
+        </div>
+        <div>
+            <button type="submit" class="view-details"><a href="about.html">Veiw Details</a></button>
+        </div>
+        <div class="table-container">
+            <h2>Recent Load/<span class="highlight-red">Booking</span></h2>
+            <div class="table-container">
+                <div class="table-header">
+                    <h2>Recently Posted Loads</h2>
+                    <a href="#" class="view-all-btn">View all load posts</a>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Source City</th>
+                            <th>Destination City</th>
+                            <th>Distance</th>
+                            <th>Weight (MT)</th>
+                            <th>Schd. Date</th>
+                            <th>Material</th>
+                            <th>Truck Type</th>
+                            <th>Posted By</th>
+                            <th>Details</th>
+                            <th>Quotation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jaipur (RJ)</td>
+                            <td>Hajipur (BR)</td>
+                            <td>1,108 Km</td>
+                            <td>Upto 7 MT</td>
+                            <td>01-Jun-2025</td>
+                            <td>Liquids/Oil</td>
+                            <td>Canters 19feet / ...</td>
+                            <td>Customer</td>
+                            <td class="actions-cell">
+                                <a href="#" class="contact-btn">View Contact</a>
+                            </td>
+                            <td class="actions-cell">
+                                <a href="#" class="quote-btn">Quote Now</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Bhiwandi (MH)</td>
+                            <td>Ghaziabad (UP)</td>
+                            <td>1,345 Km</td>
+                            <td>Upto 9 MT</td>
+                            <td>01-Jun-2025</td>
+                            <td>Others</td>
+                            <td>Truck 9MT / 6 Wheel</td>
+                            <td>Customer</td>
+                            <td class="actions-cell">
+                                <a href="#" class="contact-btn">View Contact</a>
+                            </td>
+                            <td class="actions-cell">
+                                <a href="#" class="quote-btn">Quote Now</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Lucknow (UP)</td>
+                            <td>Amroha (UP)</td>
+                            <td>393 Km</td>
+                            <td>Upto 5 MT</td>
+                            <td>01-Jun-2025</td>
+                            <td>House Hold G...</td>
+                            <td>Container Close B...</td>
+                            <td>Transporter</td>
+                            <td class="actions-cell">
+                                <a href="#" class="contact-btn">View Contact</a>
+                            </td>
+                            <td class="actions-cell">
+                                <a href="#" class="quote-btn">Quote Now</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Sonipat (HR)</td>
+                            <td>Guwahati (AS)</td>
+                            <td>1,980 Km</td>
+                            <td>Upto 7 MT</td>
+                            <td>01-Jun-2025</td>
+                            <td>Electronics ...</td>
+                            <td>Container Close B...</td>
+                            <td>Transporter</td>
+                            <td class="actions-cell">
+                                <a href="#" class="contact-btn">View Contact</a>
+                            </td>
+                            <td class="actions-cell">
+                                <a href="#" class="quote-btn">Quote Now</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ambala (HR)</td>
+                            <td>Latur (MH)</td>
+                            <td>1,673 Km</td>
+                            <td>Upto 28 MT</td>
+                            <td>01-Jun-2025</td>
+                            <td>Others</td>
+                            <td>Truck 25MT / 1...</td>
+                            <td>Transporter</td>
+                            <td class="actions-cell">
+                                <a href="#" class="contact-btn">View Contact</a>
+                            </td>
+                            <td class="actions-cell">
+                                <a href="#" class="quote-btn">Quote Now</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </main>
+    <script src="load-post.js"></script>
+    <!-- and this is the footer section -->
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h2>Load<span class="highlight-red">Connect</span></h2>
+                <img src="final logo Loadconnct.png" alt="LoadConnect">
+            </div>
+            <!-- coloumn -----1 -->
+            <div class="footer-column">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li><a href="Login.html">Log-in</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h3>contact-info</h3>
+                <p><a href="info@loadconnectgmail.com">🔗info@loadconnectgmail.com</a></p>
+                <p> <a href="tel:+91 9153692861">📞9153692861</a>
+                    /
+                    <a href="tel:+91 8210973690">8210973690</a>
+                    <a href="tel:+91 9114552303">9114552303</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright &#169; loadconnectiitcapston.netlify.app | All rights reserved ||2025
+        </div>
+    </footer>
+</body>
+
+</html>
